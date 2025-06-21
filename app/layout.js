@@ -1,4 +1,5 @@
-import Sidebar from '@/components/Sidebar.js'
+import '../styles/globals.css'
+import Sidebar from '../components/Sidebar'
 
 export default function RootLayout({ children }) {
   return (
