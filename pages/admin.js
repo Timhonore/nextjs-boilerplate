@@ -1,1 +1,0 @@
-export default function AdminDashboard() { return <div>Superadmin-dashboard placeholder</div>; }
