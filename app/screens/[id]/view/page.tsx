@@ -7,13 +7,16 @@ import { useParams } from 'next/navigation'
 export default function ViewScreen() {
   const { id } = useParams()
   const [blocks, setBlocks] = useState<any[]>([])
+  const [companyId, setCompanyId] = useState('')
   const [name, setName] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
     const load = async () => {
       const snap = await getDoc(doc(db, 'screens', id as string))
-      setBlocks(snap.data()?.content || [])
+      const data = snap.data()
+      setBlocks(data?.content || [])
+      setCompanyId(data?.companyId || '')
     }
     load()
   }, [id])
@@ -22,6 +25,7 @@ export default function ViewScreen() {
     e.preventDefault()
     await addDoc(collection(db, 'checkins'), {
       screenId: id,
+      companyId,
       name,
       createdAt: serverTimestamp(),
     })
