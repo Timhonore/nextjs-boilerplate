@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Bootstrap-like helpers */
+.container {
+  @apply mx-auto px-4;
+}
+.form-control {
+  @apply border border-gray-300 rounded px-3 py-2 w-full;
+}
+.btn {
+  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700;
+}
+.alert {
+  @apply p-3 mb-2 rounded bg-yellow-100 text-yellow-800;
+}
+.table {
+  @apply w-full text-left border-collapse;
+}
+

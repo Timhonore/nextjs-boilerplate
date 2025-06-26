@@ -1,1 +1,0 @@
-export default function FirmaDashboard() { return <div>Firmaadmin-dashboard placeholder</div>; }
