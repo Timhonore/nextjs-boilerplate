@@ -1,1 +1,0 @@
-export default function DisplayView() { return <div>Kundevisning placeholder</div>; }
